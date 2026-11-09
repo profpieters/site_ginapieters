@@ -1,0 +1,109 @@
+# Gina C. Pieters, Ph.D.
+
+> Widely published and highly cited Ph.D. economist working on digital money and assets, quantitative investment, economics, and economics education. I also speak to a wider audience on these topics, in radio, podcast, and television interviews, press quotes, and opinion pieces (from the BBC and NPR to domain-specific media). I have taught economics and finance courses from principles to the Ph.D. level at the University of Chicago, Trinity University, the University of Minnesota, and Collegio Internazionale Ca' Foscari, Venice.
+
+The site is plain HTML; nothing on it runs a script. All pages can be read for further details; this llms.txt summarizes and highlights them.
+
+I am Founder and Principal Economist of my consulting firm, Digital Economy Research and Consulting (https://www.digitaleconomyresearch.com/), where my work is organized by field: digital money, systematic strategy, economics, and assessment.
+
+Contact, including job and interview requests: gcpieters@de-rc.com. I keep standard hours in Chicago (US Central Time). Pieters is pronounced "Peters."
+
+My full CV is on the CV page, in its detailed view: https://www.ginapieters.com/cv.html#cv-detailed. The page carries the same text as the PDF, so there is no need to open the PDF.
+
+## Pages
+
+- [Gina C. Pieters, Ph.D.](https://www.ginapieters.com/): Economist working on digital money and financial markets. Referee, editor, and teacher of economics.
+- [Research](https://www.ginapieters.com/research.html): Papers and reports by field: digital money, quantitative investment research, assessment, the economics profession, and international macroeconomics and trade.
+- [Teaching](https://www.ginapieters.com/teaching.html): The courses I have taught, from principles to the Ph.D. level, with syllabi, guest lectures, mentoring and advising, and teaching evaluations.
+- [Media](https://www.ginapieters.com/media.html): Radio and podcast interviews, press quotes, opinion pieces, and coverage of my research, including appearances on call-in and live television shows.
+- [CV](https://www.ginapieters.com/cv.html): The CV of Gina C. Pieters, Ph.D., economist, in a short view and a detailed view, each also as a PDF: positions, research, teaching, and service.
+
+## Education
+
+- MA and Ph.D. Economics, University of Minnesota (Ph.D. 2012).
+- B.A. Economics, Highest Honors, University of California, Santa Cruz.
+- B.S. Physics, University of California, Santa Cruz.
+
+## Career
+
+- 2023-present: Founder and Principal Economist, Digital Economy Research and Consulting.
+- 2025-present: Board Director for Monetary Policy and Executive Committee Advisor, NABE Chicago (the Chicago chapter of the National Association for Business Economics).
+- 2023-present: Committee Member and Newsletter Oversight Editor, CSWEP (the American Economic Association's Committee on the Status of Women in the Economics Profession).
+- 2025-2026: Lead Research Economist, Confusion Capital.
+- 2022-2025: Co-chair, Emergent Money Systems Working Group, Cambridge Digital Assets Programme, Cambridge Centre for Alternative Finance (CCAF), University of Cambridge.
+- 2024: Visiting Instructor, Harris School of Public Policy, University of Chicago.
+- 2018-2024: Lecturer/Assistant Instructional Professor, Department of Economics, University of Chicago.
+- 2018-2024: Honorary Non-Visiting Research Fellow, CCAF, University of Cambridge.
+- 2018-2024: Board of Directors (three two-year terms), International Trade and Finance Association.
+- 2022-2023: Associate Fellow (Pedagogy), Chicago Center for Teaching & Learning, University of Chicago.
+- 2012-2018: Assistant Professor, Department of Economics, Trinity University, San Antonio, Texas.
+- 2010-2012: Lead Instructor, Principles of Macroeconomics, Department of Economics, University of Minnesota.
+- 2007-2012: Instructor, Department of Economics, University of Minnesota.
+
+The details of each position are in the text of the CV page's detailed view: https://www.ginapieters.com/cv.html#cv-detailed. It carries the same text as the PDF, so there is no need to open the PDF.
+
+## Selected courses
+
+Topics, syllabi, and teaching evaluations for each course: https://www.ginapieters.com/teaching.html
+
+- [Principles of Macroeconomics](https://www.ginapieters.com/teaching.html#course-principles-of-macroeconomics): Taught at the University of Chicago, Trinity University, and the University of Minnesota. Syllabus: https://www.ginapieters.com/syllabi/econ-10200.pdf
+- [Principles of Microeconomics](https://www.ginapieters.com/teaching.html#course-principles-of-microeconomics): Taught at Trinity University.
+- [Intermediate Microeconomics](https://www.ginapieters.com/teaching.html#course-the-elements-of-economic-analysis-i): The Elements of Economic Analysis I and II, calculus-based consumer and producer theory, at the University of Chicago. Syllabi: https://www.ginapieters.com/syllabi/econ-20000.pdf and https://www.ginapieters.com/syllabi/econ-20100.pdf
+- [Intermediate Macroeconomics](https://www.ginapieters.com/teaching.html#course-the-elements-of-economic-analysis-iii): The Elements of Economic Analysis III, dynamic general equilibrium with beginning MATLAB programming, and Economic Policy Analysis, at the University of Chicago; and Intermediate Macroeconomics at the University of Minnesota. Syllabi: https://www.ginapieters.com/syllabi/econ-20200.pdf and https://www.ginapieters.com/syllabi/econ-23950.pdf
+- [International Trade](https://www.ginapieters.com/teaching.html#course-international-trade): Taught at Trinity University. Syllabus: https://www.ginapieters.com/syllabi/econ-3347.pdf
+- [International Monetary Systems](https://www.ginapieters.com/teaching.html#course-international-monetary-systems): Taught at the University of Chicago and Trinity University. Syllabus: https://www.ginapieters.com/syllabi/econ-17110.pdf
+- [Cryptoasset Markets](https://www.ginapieters.com/teaching.html#course-cryptoasset-markets): A master's course in Financial Mathematics at the University of Chicago on the technology, markets, and players of crypto, testing where the tools of traditional finance work, or fail; students write a trading strategy as code to run on an exchange. Syllabus: https://www.ginapieters.com/syllabi/finm-31000.pdf
+- [Risk and Benefits of Digitized Money and Assets](https://www.ginapieters.com/teaching.html#course-risk-and-benefits-of-digitized-money-and-assets): A Ph.D. course on the theoretical models of risk from central bank digital currencies, stablecoins, and crypto markets, at Collegio Internazionale Ca' Foscari, Venice. Syllabus: https://www.ginapieters.com/syllabi/docra.pdf
+
+## Research works
+
+Summaries, figures, and links for each work, by field: https://www.ginapieters.com/research.html
+
+Digital money:
+
+- [Cambridge Digital Mining Industry Report: Global Operations, Sentiment, and Energy Use](https://doi.org/10.2139/ssrn.5236060): University of Cambridge, CCAF, April 2025.
+- [Blockchain Governance in the Wild](https://doi.org/10.21428/58320208.ebd76eea): Cryptoeconomic Systems, April 2024.
+- [Crypto-Currencies and Crypto-Assets: An Introduction](https://doi.org/10.1057/s41302-023-00246-1): Eastern Economic Journal, April 2023.
+- [Digital Currencies and Central Banks](https://doi.org/10.1007/978-3-030-65117-6_6): The Palgrave Handbook of Technological Finance, September 2021.
+- [Private and Hybrid Blockchains and Applications](https://doi.org/10.1108/978-1-83982-198-120211009): The Emerald Handbook of Blockchain for Business, 2021.
+- [3rd Global Cryptoasset Benchmarking Study](https://www.jbs.cam.ac.uk/faculty-research/centres/alternative-finance/publications/3rd-global-cryptoasset-benchmarking-study/): University of Cambridge, CCAF, September 2020.
+- [Taxing Blockchain Forks](https://stanford-jawlp.pubpub.org/pub/taxing-blockchain-forks/release/1): Stanford Journal of Blockchain Law & Policy, June 2020.
+- [2nd Global Cryptoasset Benchmarking Study](https://www.jbs.cam.ac.uk/faculty-research/centres/alternative-finance/publications/2nd-global-cryptoasset-benchmark-study/): University of Cambridge, CCAF, December 2018.
+- [Distributed Ledger Technology Systems: A Conceptual Framework](https://doi.org/10.2139/ssrn.3230013): University of Cambridge, CCAF, August 2018.
+- Are Cryptocurrency Markets Price Efficient? Depends on the Data Source: Resting.
+- [Financial Regulations and Price Inconsistencies across Bitcoin Markets](https://doi.org/10.1016/j.infoecopol.2017.02.002): Information Economics and Policy, June 2017.
+- [The Potential Impact of Decentralized Virtual Currency on Monetary Policy](https://fedinprint.org/item/feddgm/14579): Federal Reserve Bank of Dallas, Globalization and Monetary Policy Institute, 2016 Annual Report, April 2017.
+- [Blockchain Technology Disrupting Traditional Records Systems](https://fraser.stlouisfed.org/title/financial-insights-6462/volume-6-issue-2-611654): Federal Reserve Bank of Dallas, Financial Insights, Second Quarter 2017.
+- [Bitcoin Reveals Exchange Rate Manipulation and Detects Capital Controls](https://doi.org/10.2139/ssrn.2714921): Resting.
+
+Quantitative investment research:
+
+- Robust Search: Exploiting Tolerance To Optimize Trading Strategies: Working paper, in progress.
+- Manufactured Premia: How Universe Construction Creates the Crypto Cross-Section: Working paper, in progress.
+
+Assessment:
+
+- [Measuring Academic Mindset in Economics Courses](https://doi.org/10.1016/j.iree.2026.100349): International Review of Economics Education, June 2026.
+- [Designing Effective Assessments in Economics Courses: Guiding Principles](https://doi.org/10.1080/00220485.2023.2265941): The Journal of Economic Education, 2024.
+
+The economics profession:
+
+- A Guide to the U.S. Academic Economics Job Market for Teaching-Focused Jobs: Resting.
+- Seeking Teachers: Changes in US Academic Economics Department Jobs: Resting.
+
+International macroeconomics and trade:
+
+- The Effect of Income Inequality on Import Prices: Resting.
+- The Composition of the Allocation Puzzle through Time: Resting.
+- Re-evaluating Stylized Business Cycle Facts for Developed and Developing Countries: Resting.
+
+## Consulting
+
+- Speaking: I no longer speak at events that do not cover my travel and accommodation, and if attendees must buy tickets, I ask for an honorarium. Standard exemptions for academia and policy institutions apply.
+- [Connect, Digital Economy Research and Consulting](https://www.digitaleconomyresearch.com/connect.html): How an engagement works, availability, rates from $500 an hour, and how to get in touch.
+- [Digital Economy Research and Consulting, llms.txt](https://www.digitaleconomyresearch.com/llms.txt): The firm's own summary: its services, how to engage it, and its work by field.
+
+## Optional
+
+- [CV, short view (PDF)](https://www.ginapieters.com/cv-short.pdf): The short view of my CV: education, positions, research and publications, and teaching.
+- [CV, detailed view (PDF)](https://www.ginapieters.com/cv-detailed.pdf): My full CV, with detailed descriptions of my tasks and experience. The same text is on the CV page's detailed view (https://www.ginapieters.com/cv.html#cv-detailed), so there is no need to open the PDF.

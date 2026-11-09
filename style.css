@@ -1,0 +1,234 @@
+/* Fresh personal site (W2), Builder, 2026-10-30. Layout: one reading column; sentence clusters on the home page; each field
+   page is F4 (her "Use F4 for all four fields", 10-31): a lead, then cards (2026-10-31).
+   Fonts are self-hosted (OFL, fonts/OFL-*.txt), so the site makes no third-party request and opens offline. */
+
+@font-face { font-family: "Spectral"; font-weight: 600; font-style: normal; font-display: swap;
+             src: url("fonts/spectral-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "Public Sans"; font-weight: 400; font-style: normal; font-display: swap;
+             src: url("fonts/public-sans-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Public Sans"; font-weight: 400; font-style: italic; font-display: swap;
+             src: url("fonts/public-sans-latin-400-italic.woff2") format("woff2"); }
+@font-face { font-family: "Public Sans"; font-weight: 600; font-style: normal; font-display: swap;
+             src: url("fonts/public-sans-latin-600-normal.woff2") format("woff2"); }
+
+:root {
+  /* design A, "Warm paper" (her "I like A", 10-30): cream paper, warm ink, one terracotta accent (links), and a soft glow behind the home page's name. Every text colour is at least 5.6:1 on paper and card. */
+  --paper: #faf6f0;
+  --ink: #2a221c;
+  --muted: #6b5a4c;
+  --rule: #e6dccf;
+  --accent: #9a3f1c;
+  --card: #fffdf9;
+  --glow: #f3dcc4;
+  --display: "Spectral", Georgia, "Times New Roman", serif;
+  --body: "Public Sans", "Segoe UI", system-ui, sans-serif;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --paper: #1c1814; --ink: #efe7dd; --muted: #b9aa9b; --rule: #3a322b; --accent: #e7a07f; --card: #25201b;
+          --glow: #3a2a1f; }
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+html { scrollbar-gutter: stable; }   /* a short page keeps the scrollbar's room, so the centred column does not shift between pages (her 11-07 "27 yes") */
+body { margin: 0; background: var(--paper); color: var(--ink); font: 400 1.0625rem/1.6 var(--body); }
+/* a page shorter than the window keeps its footer at the window's foot; a longer one, right after the content (her 11-08
+   "38. yes", via PM) */
+body { display: flex; flex-direction: column; min-height: 100vh; }
+footer { margin-top: auto; }
+a { color: var(--accent); text-underline-offset: .15em; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+main a, footer a { overflow-wrap: anywhere; }
+h1, h2 { font-family: var(--display); font-weight: 600; line-height: 1.2; }
+h1 { font-size: 2.1rem; margin: 0 0 .6rem; }
+h2 { font-size: 1.25rem; margin: 0 0 .4rem; }
+h4 { font-size: 1em; font-style: italic; font-weight: 400; margin: .8rem 0 .2rem; }   /* the CV's Methods subheads, as in the PDF: the size of their own bullets */
+h4 .tag { font-style: normal; }
+cite { font-style: italic; }
+
+.vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }   /* read, not shown: the inner pages' titles (her "33 yes"; the DERC site's rule) */
+.skip { position: absolute; left: -999px; }
+.skip:focus { left: 1rem; top: 1rem; background: var(--card); padding: .4rem .7rem; }
+
+/* the name and the menu both on the left, on every page (her 11-07: "the switch from the links being on the left to
+   the right is not human optimal. Keep on left.") */
+.bar { max-width: 44rem; margin: 0 auto; padding: .8rem 1rem; display: flex; flex-wrap: wrap; gap: .4rem 1.6rem;
+       align-items: baseline; justify-content: flex-start; }
+.top { border-bottom: 1px solid var(--rule); }
+.brand { font-family: var(--display); font-weight: 600; font-size: 1.1rem; color: var(--ink); text-decoration: none; }
+nav { display: flex; flex-wrap: wrap; gap: .3rem .8rem; font-size: .92rem; }   /* eight items fit one line at 44rem */
+nav a { color: var(--muted); text-decoration: none; }
+nav a[aria-current="page"] { color: var(--ink); font-weight: 600; }
+nav a:hover { color: var(--accent); }
+/* menu design A's main group (her "I like design A the most.", 10-31), now the whole menu: CV, Research, Teaching,
+   Media (her 11-07 order); on the home page, which has no name above the menu, it starts at the left like the rest */
+nav { align-items: baseline; gap: .3rem 1rem; }
+nav .fields { display: flex; flex-wrap: wrap; gap: .3rem 1rem; }
+nav .fields a { color: var(--ink); font-size: 1rem; }
+.button { color: var(--accent); }
+
+main { width: 100%; max-width: 44rem; margin: 0 auto; padding: 2.2rem 1rem 3rem; }   /* width: a flex item with auto margins would shrink to its text */
+main.wide { max-width: 60rem; }   /* the CV page, her 11-05 "a bigger span" */
+.lede { font-size: 1.2rem; color: var(--muted); margin: 0 0 2rem; }
+
+/* the home page's head (design A): her round photo beside the name and descriptor, on plain paper like every page
+   (her 11-07 "25 2b", via PM: the glow behind it is gone, and with it Teaching's, which its .intro paragraphs had caught) */
+.intro { display: flex; gap: 1.8rem; align-items: center; margin: .4rem 0 2.4rem; }
+.intro .lede { margin: 0; }
+.portrait { display: block; flex: none; width: 10rem; height: 10rem; border-radius: 50%; object-fit: cover;
+            object-position: 50% 25%; box-shadow: 0 0 0 6px var(--card), 0 8px 24px rgba(60, 40, 20, .18); }
+@media (max-width: 34rem) { .intro { flex-direction: column; align-items: flex-start; gap: 1.2rem; }
+                            .portrait { width: 7.5rem; height: 7.5rem; } }
+
+/* the home page's pages, as plain sentence clusters (her 11-04: the cards were "a little bit too polished"); each
+   cluster a paragraph, its links in the text */
+.clusters { margin: 0 0 1.8rem; }
+.clusters p { margin: 0 0 1.1rem; }
+.more { color: var(--muted); }
+.contact { border-top: 1px solid var(--rule); margin-top: 2rem; padding-top: 1.4rem; }
+.contact p { margin: .3rem 0; }
+
+/* field pages, F4: the lead is "What I do" beside one of her research figures (alone where no figure fits), stacked
+   on a phone. The figure sits on white in both modes, so its caption colour is fixed (8.5:1 on white) */
+/* Teaching's lead at the other pages' first-paragraph margin and the site's text size (her 11-08 "teaching top gap:
+   match", "39 match", via PM) */
+.lead { display: grid; grid-template-columns: 1fr 1fr; gap: 1.6rem; align-items: center; margin: 1em 0 1rem; }
+.lead > div:only-child { grid-column: 1 / -1; }
+.lead p { margin: 0; }
+.lead h2 { font-size: 1.05rem; color: var(--muted); }
+figure { margin: 0; background: #fff; border-radius: 12px; padding: .6rem; box-shadow: 0 8px 22px rgba(60, 40, 20, .08); }
+figure img { display: block; width: 100%; height: auto; }
+figure a { display: block; cursor: zoom-in; }   /* her "option a" (11-02): the figure opens full size */
+figcaption { color: #5a4a3d; font-size: .85rem; margin-top: .4rem; }
+@media (max-width: 40rem) { .lead { grid-template-columns: 1fr; } }
+/* Teaching: the text wraps around the figure (her 11-07), floated right where the grid put it; stacked on a phone, as
+   the Papers thumbnails are */
+.lead.wrap { display: flow-root; }
+.lead.wrap figure { float: right; width: 45%; margin: .2rem 0 .8rem 1.6rem; }
+.lead.wrap p + p { margin-top: .7rem; }
+@media (max-width: 40rem) { .lead.wrap figure { float: none; width: auto; margin: 0 0 1rem; } }
+@media (max-width: 34rem) { h1 { font-size: 1.75rem; } }
+
+/* then cards, paired from 40rem, a .wide one across the column. Each card's top edge and bullets share one hue: the
+   site's terracotta by default, then her consulting palette's slate, teal, sage, lilac and copper (the AA-darkened
+   shades on paper, the live ones on the dark ground). The edges carry no text. A .band is the consulting link */
+:root { --slate: #446478; --teal: #3b6768; --sage: #47675f; --lilac: #685c6f; --copper: #7c593e; }
+@media (prefers-color-scheme: dark) {   /* teal: no live shade is recorded, so a lightened one of mine */
+  :root { --slate: #6391ae; --teal: #6b9c9d; --sage: #639085; --lilac: #887891; --copper: #b7845c; } }
+.cards { display: grid; gap: 1.1rem; margin-top: 1.8rem; }
+@media (min-width: 40rem) { .cards { grid-template-columns: 1fr 1fr; } .cards .wide { grid-column: 1 / -1; } }
+.cards section { --edge: var(--accent); background: var(--card); border-radius: 14px; border-top: 5px solid var(--edge);
+                 padding: 1.1rem 1.4rem .8rem; transition: transform .15s, box-shadow .15s;
+                 box-shadow: 0 1px 2px rgba(60, 40, 20, .06), 0 8px 22px rgba(60, 40, 20, .08); }
+.cards .slate { --edge: var(--slate); } .cards .teal { --edge: var(--teal); } .cards .sage { --edge: var(--sage); }
+.cards .lilac { --edge: var(--lilac); } .cards .copper { --edge: var(--copper); }
+.cards .band { background: var(--glow); }
+.cards h2 { font-size: 1.4rem; margin-bottom: .6rem; }
+.cards p, .cards ul { margin: 0 0 .5rem; }
+.cards ul { padding-left: 1.1rem; }
+.cards li { margin-bottom: .5rem; }
+.cards li::marker { color: var(--edge); }
+/* a card that holds a link lifts under the pointer or keyboard focus */
+.cards section:has(a):hover, .cards section:focus-within {
+  transform: translateY(-3px); box-shadow: 0 2px 4px rgba(60, 40, 20, .08), 0 14px 32px rgba(60, 40, 20, .16); }
+/* her "drop downs only" (11-02): a field page's areas are collapsible sections, closed until clicked; plain, as the
+   Research page's are, not cards (her 11-07 "25 2b", via PM); --edge stays the bullets' and course triangles' hue */
+.allwork { margin-top: 1.8rem; }
+.allwork details { --edge: var(--accent); scroll-margin-top: 1rem; }
+.allwork .slate { --edge: var(--slate); } .allwork .teal { --edge: var(--teal); } .allwork .sage { --edge: var(--sage); }
+.allwork .lilac { --edge: var(--lilac); } .allwork .copper { --edge: var(--copper); }
+.allwork summary span { color: var(--muted); }   /* a course title at the site's 17px, as Research's titles (her "39 match") */
+.allwork ul { padding-left: 1.1rem; margin: 0 0 .9rem; }
+.allwork h3 { font-size: 1rem; margin: .4rem 0 .4rem; }   /* a group label inside a section (her "by audience") */
+.allwork hr { border: 0; border-top: 1px solid var(--rule); margin: .2rem 0 .8rem; }   /* role lines after the groups */
+.allwork li { margin-bottom: .5rem; }
+.allwork li::marker { color: var(--edge); }
+/* Digital money's final layout (her 11-03): a label over each band of sections in the band's colour (her "Can "Output",
+   "Tools", "Engagement", "Evaluation" be written on the groups"); a paper's or course's line is itself a drop-down whose
+   triangle is its bullet (her "A with fuller dropdown", "can the symbol be used as the bullet point?"); a draft carries a
+   Work in progress flag where its link will go */
+.allwork .kind { color: var(--edge, var(--accent)); font-size: .8rem; font-weight: 700; letter-spacing: .1em;
+                 text-transform: uppercase; margin: 1.4rem 0 .45rem; padding-left: .2rem; }
+.allwork .kind:first-child { margin-top: .4rem; }
+.allwork .intro { margin: 0 0 .6rem; }
+.allwork details.paper { --edge: inherit; background: none; border: 0; border-radius: 0; margin: 0; padding: 0; }
+.allwork li:has(> details.paper) { list-style: none; }
+.allwork details.paper > summary { display: list-item; list-style: disclosure-closed outside; padding: 0; cursor: pointer; }
+.allwork details.paper[open] > summary { list-style-type: disclosure-open; }
+.allwork details.paper > summary::marker { color: var(--edge); }
+.allwork .ptitle { color: var(--accent); text-decoration: underline dotted; text-underline-offset: 3px; }
+.allwork details.paper > summary:hover .ptitle { text-decoration-style: solid; }
+.allwork details.paper[open] .ptitle { text-decoration: none; font-weight: 600; }
+.allwork details.paper p { margin: .4rem 0 .3rem; padding-left: .8rem; border-left: 2px solid var(--rule); }   /* the site's 17px, its Syllabus line too, as Research's link lines (her "39 match") */
+.allwork .pfig { margin: .5rem 0 .6rem .8rem; }
+.wip { display: inline-block; color: var(--muted); font-size: .8rem; font-style: italic; padding: 0 .45rem;
+       border: 1px solid currentColor; border-radius: .6rem; }
+
+/* the shared pages (research, media, archive) keep their original classes */
+.note, .pending { color: var(--muted); font-size: .95rem; }
+.blue { background: #dce8fb; }   /* a line for her read before it is final (house style BLUE); its title says why */
+@media (prefers-color-scheme: dark) { .blue { background: #23324a; } }
+.draft { color: #1a56b0; }   /* a draft awaiting her accept-or-strike, tagged [draft] (Wright, 11-05) */
+details.cvsec > summary { list-style: none; cursor: pointer; }   /* a CV section as a drop-down (her 11-05) */
+details.cvsec > summary::-webkit-details-marker { display: none; }
+/* each triangle twice: drawn, then drawn with empty alternative text so a screen reader does not say it (her "35. yes",
+   via PM); a browser without the second form keeps the first */
+details.cvsec > summary h2::before { content: "▸ "; content: "▸ " / ""; color: var(--muted); }
+details.cvsec[open] > summary h2::before { content: "▾ "; content: "▾ " / ""; }
+details.cvsec > .cvtarget { display: block; scroll-margin-top: 3.5rem; }   /* a CV Sections link lands here and opens the section, its heading in view */
+@media (prefers-color-scheme: dark) { .draft { color: #9cbcff; } }
+/* the CV page's two views, her 11-06 "show the toggle": two links show one, short by default, no script. The detailed
+   view shows while it or anything in it is the target, so its own section links keep it (her 11-07 "29 a", via PM) */
+.cvviews-label { color: var(--muted); margin-right: .3rem; }
+.cvviews > a { display: inline-block; padding: .15rem .8rem; border: 1px solid var(--rule); border-radius: 4px; color: var(--ink); text-decoration: none; font-family: var(--body); font-size: .9rem; }
+.cvviews:not(:has(.cvview-detailed:target, .cvview-detailed :target)) > a[href="cv.html"],
+.cvviews:has(.cvview-detailed:target, .cvview-detailed :target) > a[href="#cv-detailed"] { background: var(--accent); border-color: var(--accent); color: var(--paper); }
+.cvview-detailed { display: none; scroll-margin-top: 3rem; }   /* on a click the switch stays in view above it */
+.cvviews:has(.cvview-detailed:target, .cvview-detailed :target) .cvview-detailed { display: block; }
+.cvviews:has(.cvview-detailed:target, .cvview-detailed :target) .cvview-short { display: none; }
+.cvview-short :is(p, ol, ul) { margin: 0; }   /* her 11-06: "in the short cv there is a lot of empty space between lines" */
+.cvview-short h2 { font-family: inherit; font-size: 1.17em; font-weight: 700; line-height: inherit; margin: 1em 0; }   /* as the default h3: the short view's headings are h2 (axe heading-order) */
+.tag { color: var(--muted); font-size: .8rem; }   /* which private CV line a blue line comes from */
+.entry { padding-left: 7rem; text-indent: -7rem; }
+.entry .d { display: inline-block; width: 7rem; text-indent: 0; color: var(--muted); }
+ul.under { margin-left: 7rem; }   /* a list under a position: in the entries' text column */
+/* her 11-08 "align the position under teaching with the numbering (i.e. instructor aligns with the numbering)", and
+   "Positions move left": in Instructor of Record each number starts, left-aligned, where the position line starts */
+.entry.pos { padding-left: .6em; text-indent: 0; }
+.entry.pos .d { display: none; }
+ol.taught { list-style: none; padding-left: 2.7em; }
+ol.taught > li { counter-increment: taught; }
+ol.taught > li::before { content: counter(taught) "."; display: inline-block; width: 2.1em; margin-left: -2.1em;
+  font-variant-numeric: tabular-nums; }
+.topics { display: flex; flex-wrap: wrap; gap: .3rem 1rem; margin-bottom: 1rem; font-size: .95rem; }
+/* the Teaching page's evaluations tables, her 11-07 (wright-670); on a phone they scroll sideways inside their box, not the
+   page. Set out to the list's left edge and tight enough that Chicago's columns (eight until her 11-08 cut, six now) fit the text column on a desktop */
+.allwork li.evaltable { list-style: none; overflow-x: auto; margin-left: -1.1rem; }
+.evaltable table { border-collapse: collapse; width: 100%; font-size: .8rem; }
+.evaltable caption { text-align: left; color: var(--muted); padding-bottom: .4rem; }
+.evaltable th, .evaltable td { text-align: left; vertical-align: top; padding: .3rem; border-bottom: 1px solid var(--rule); }
+.evaltable td:nth-child(3), .evaltable td:nth-child(4) { white-space: nowrap; }
+/* the Research page by field, her 11-07 (wright-670): each field a drop-down; each work's figure left, then right.
+   Teaching's sections take the same drawn triangle (her "25 2b"), and every section's line, the CV's too, the hand
+   pointer and the h2's plain margin (her "31 yes", via PM) */
+:is(details.field, .allwork > details) > summary { list-style: none; cursor: pointer; }
+:is(details.field, .allwork > details) > summary::-webkit-details-marker { display: none; }
+:is(details.field, .allwork > details) > summary :is(h2, h3)::before { content: "▸ "; content: "▸ " / ""; color: var(--muted); }
+:is(details.field, .allwork > details)[open] > summary :is(h2, h3)::before { content: "▾ "; content: "▾ " / ""; }
+ul.works { list-style: none; padding: 0; }
+/* the figure floats, so the text wraps beneath it; a click shows its large copy over the page (her 11-07) */
+.work { display: flow-root; margin: 0 0 1.8rem; } .work > div p { margin: 0 0 .5rem; }
+.fig { position: relative; float: left; width: 10rem; margin: .2rem 1.2rem .6rem 0; cursor: zoom-in; }
+.work.right .fig { float: right; margin: .2rem 0 .6rem 1.2rem; }
+.fig img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); background: #fff; }
+.fig input { position: absolute; top: 0; left: 0; width: 1px; height: 1px; opacity: 0; }
+.fig input:focus-visible + img { outline: 2px solid var(--text, currentColor); outline-offset: 2px; }
+.fig img.large { display: none; }
+.fig input:checked ~ img.large { display: block; position: fixed; inset: 0; margin: auto; width: auto; height: auto; max-width: min(95vw, 1200px); max-height: 92vh; z-index: 100; box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .75); cursor: zoom-out; }
+@media (max-width: 34rem) { .fig, .work.right .fig { float: none; width: 12rem; margin: 0 0 .6rem; } }
+@media (max-width: 34rem) { .entry { padding-left: 0; text-indent: 0; } .entry .d { display: block; width: auto; } ul.under { margin-left: 0; } }
+
+footer { border-top: 1px solid var(--rule); color: var(--muted); font-size: .9rem; }
+footer .bar { display: block; }   /* one line of text that wraps, not the header's spread-out flex row */
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
